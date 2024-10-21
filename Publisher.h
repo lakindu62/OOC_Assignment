@@ -1,39 +1,17 @@
-#ifndef PUBLISHER_H
-#define PUBLISHER_H
-#define SIZE 2;
-#include <string>
-#include "Book.h"
-#include <vector>
+//
+// Created by Lakindu on 2024-10-22.
+//
 
-class Author; 
+#ifndef ASSIGNMENT_PUBLISHER_H
+#define ASSIGNMENT_PUBLISHER_H
+#include "User.h"
 
-class Publisher {
-private:
-    std::string name;
+class Publisher : public User {
     std::string contact;
-    Author *auth[SIZE]; 
-    Book *book[SIZE];
-
-
 public:
-    Publisher(const std::string& name, const std::string& contact);
-    ~Publisher();
+    Publisher(int uID, std::string u, std::string e, std::string p, std::string contactI );
 
-    // Getters and setters
-    std::string getName() const { return name; }
-    std::string getContact() const { return contact; }
-    void setName(const std::string& name) { this->name = name; }
-    void setContact(const std::string& contact) { this->contact = contact; }
-
-    // Author management
-    void addAuthor(Author* author);
-    void removeAuthor(Author* author);
-    const std::vector<Author*>& getAuthors() const { return authors; }
-
-    // Business logic methods
-    void manageBooks();
-    void trackSales();
-    void manageRight();
 };
 
-#endif
+
+#endif //ASSIGNMENT_PUBLISHER_H

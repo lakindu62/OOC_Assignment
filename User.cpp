@@ -13,6 +13,10 @@ User::User(int uID ,  std::string u , std::string e , std::string p ){
     password = p;
 }
 
+std::string User::getName(){
+    return username;
+}
+
 bool User::login(std::string Iemail , std::string Ipassword){
 
 

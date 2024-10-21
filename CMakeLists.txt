@@ -7,4 +7,13 @@ add_executable(Assignment main.cpp
         User.cpp
         User.h
         Customer.cpp
-        Customer.h)
+        Customer.h
+        Author.h
+        Author.cpp
+        Publisher.h
+        Publisher.cpp
+        Book.cpp
+        Book.h
+
+
+)

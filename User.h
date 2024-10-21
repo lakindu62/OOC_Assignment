@@ -16,6 +16,7 @@ class User {
 
 public:
     User(int uID , std::string u , std::string e , std::string p );
+    std::string getName();
     bool login(std::string Iemail , std::string Ipassword);
     void logout();
     void updateProfile();

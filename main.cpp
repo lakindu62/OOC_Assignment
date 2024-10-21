@@ -1,13 +1,30 @@
 #include <iostream>
 #include "User.h"
+#include "Customer.h"
+#include "Author.h"
+#include "Publisher.h"
+#include "Book.h"
 
 int main() {
 
 
-    User user1(1, "Lakindu", "lakindu62@gmail.com" , "12345");
+    Publisher p1 = Publisher(1, "Lakindu", "lakindu62@gmail.com" , "12345", "0775124585");
 
-    user1.login("lakindu62@gmail.com" , "12345");
-    user1.logout();
+    p1.login("lakindu62@gmail.com" , "12345");
+
+    Author a2 = Author(1, "LakinduAuth", "lakinduAuth62@gmail.com"  , "12345", "This is my BIo");
+
+    Book b1 = Book("1", "BookTitle", 200, "Romance", 60 , &a2 , &p1);
+
+    b1.getDetails();
+
+
+
+
+
+
+
+
 
     return 0;
 }
