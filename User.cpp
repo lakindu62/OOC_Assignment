@@ -13,15 +13,15 @@ User::User(int uID ,  std::string u , std::string e , std::string p ){
     password = p;
 }
 
+
 std::string User::getName(){
     return username;
 }
 
+
 bool User::login(std::string Iemail , std::string Ipassword){
 
-
-    bool isLoggedIn =  email == Iemail and password == Ipassword;
-
+    bool isLoggedIn =  email == Iemail && password == Ipassword;
     if(isLoggedIn){
         std::cout << "Logged in" << std::endl;
         return true;
@@ -30,8 +30,12 @@ bool User::login(std::string Iemail , std::string Ipassword){
         return false;
     }
 
+
 }
 
 void User::logout() {
     std::cout << "Logged out" << std::endl;
 }
+
+
+

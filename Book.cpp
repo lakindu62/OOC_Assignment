@@ -17,6 +17,16 @@ Book::Book(std::string bID, std::string t, double p, std::string g, int sL , Aut
 
 }
 
+Book::Book(std::string bID, std::string t, double p, std::string g, int sL, std::string authorN, std::string publisherN) {
+    book_id = std::move(bID);
+    title = std::move(t);
+    price = p;
+    genre = std::move(g);
+    stockLevel = sL;
+    authorName = std::move(authorN);
+    publisherName = std::move(publisherN);
+}
+
 void Book::getDetails(){
     std::cout << "Book ID: " << book_id << std::endl;
     std::cout << "Title: " << title << std::endl;

@@ -4,6 +4,7 @@
 #include "Author.h"
 #include "Publisher.h"
 #include "Book.h"
+#include "Admin.h"
 
 int main() {
 
@@ -17,6 +18,9 @@ int main() {
     Book b1 = Book("1", "BookTitle", 200, "Romance", 60 , &a2 , &p1);
 
     b1.getDetails();
+
+    Admin admin1 = Admin(1, "LakinduAdmin", "lakinduAdmin62@gmail.com" , "12345");
+    admin1.addBook();
 
 
 

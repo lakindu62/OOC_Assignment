@@ -16,11 +16,15 @@ private:
     double price;
     std::string genre;
     int stockLevel;
-    Author *author;
-    Publisher *publisher;
+    std::string authorName; //unregistered Author
+    std::string publisherName; //unregistered Publisher
+
+    Author *author{};
+    Publisher *publisher{};
 
 public:
     Book(std::string bID, std::string t, double p, std::string g, int sL , Author *a, Publisher *pub);
+    Book(std::string bID, std::string t, double p, std::string g, int sL, std::string authorN, std::string publisherN);
     void getDetails();
     void updateStockLevel(int quantity);
 };

@@ -12,6 +12,7 @@
 class Author: public User {
     std::string biography;
 public:
+
     Author(int uID, std::string u, std::string e, std::string p, std::string biographyI );
 };
 

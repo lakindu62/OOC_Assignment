@@ -14,6 +14,10 @@ add_executable(Assignment main.cpp
         Publisher.cpp
         Book.cpp
         Book.h
+        Admin.cpp
+        Admin.h
+        Admin.h
+        Admin.cpp
 
 
 )
