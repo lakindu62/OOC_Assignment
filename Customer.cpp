@@ -14,3 +14,14 @@ Customer::Customer(int uID, std::string u, std::string e, std::string p, std::st
 
 
 
+void Customer::addToCart() {
+    cout << "Item added to cart" << endl;
+}
+
+void Customer::placeOrder() {
+    cout << "Order placed" << endl;
+}
+
+void Customer::writeReview() {
+    cout << "Review written" << endl;
+}

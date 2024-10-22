@@ -5,9 +5,9 @@
 #ifndef ASSIGNMENT_BOOK_H
 #define ASSIGNMENT_BOOK_H
 #include <string>
-#include "Author.h"
 #include "Publisher.h"
 
+class Author; // Forward Declaration   -- Avoid Circular Dependency
 
 class Book {
 private:
@@ -19,8 +19,10 @@ private:
     std::string authorName; //unregistered Author
     std::string publisherName; //unregistered Publisher
 
-    Author *author{};
-    Publisher *publisher{};
+
+
+    Author *author;
+    Publisher *publisher;
 
 public:
     Book(std::string bID, std::string t, double p, std::string g, int sL , Author *a, Publisher *pub);

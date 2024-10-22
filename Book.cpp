@@ -3,6 +3,8 @@
 //
 
 #include "Book.h"
+#include "Author.h"
+#include "Publisher.h"
 #include <iostream>
 
 Book::Book(std::string bID, std::string t, double p, std::string g, int sL , Author *a, Publisher *pub) {

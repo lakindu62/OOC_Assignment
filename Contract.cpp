@@ -13,6 +13,7 @@ Contract::Contract(Author* a, Publisher* p, std::string sD, std::string eD, std:
     contractTerms = cT;
 }
 
+
 void Contract::displayContract() {
     std::cout << "Author: " << author->getName() << std::endl;
     std::cout << "Publisher: " << publisher->getName() << std::endl;

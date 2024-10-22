@@ -20,6 +20,10 @@ add_executable(Assignment main.cpp
         Admin.cpp
         Contract.cpp
         Contract.h
+        Cart.cpp
+        Cart.h
+        Review.cpp
+        Review.h
 
 
 )
