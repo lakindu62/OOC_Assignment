@@ -5,7 +5,7 @@
 #include "Publisher.h"
 #include "Book.h"
 #include "Admin.h"
-
+#include "Contract.h"
 int main() {
 
 
@@ -17,10 +17,19 @@ int main() {
 
     Book b1 = Book("1", "BookTitle", 200, "Romance", 60 , &a2 , &p1);
 
-    b1.getDetails();
+//    b1.getDetails();
+//    Admin admin1 = Admin(1, "LakinduAdmin", "lakinduAdmin62@gmail.com" , "12345");
+//    admin1.addBook();
 
-    Admin admin1 = Admin(1, "LakinduAdmin", "lakinduAdmin62@gmail.com" , "12345");
-    admin1.addBook();
+
+    Contract *c1;
+    c1 = new Contract(&a2, &p1, "10/10/2024", "10/10/2025", "contract Terms");
+    c1->displayContract();
+
+
+
+
+
 
 
 

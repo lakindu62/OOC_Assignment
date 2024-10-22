@@ -18,6 +18,8 @@ add_executable(Assignment main.cpp
         Admin.h
         Admin.h
         Admin.cpp
+        Contract.cpp
+        Contract.h
 
 
 )
