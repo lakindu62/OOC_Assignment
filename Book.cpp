@@ -29,6 +29,21 @@ Book::Book(std::string bID, std::string t, double p, std::string g, int sL, std:
     publisherName = std::move(publisherN);
 }
 
+
+void Book::addReview(Review *r) {
+    for (int i = 0; i < 20; i++) {
+        if (reviews[i] == nullptr) {
+            reviews[i] = r;
+            std::cout << "Review Added to Book" << std::endl;
+            return;
+        }
+
+    }
+
+
+}
+
+
 void Book::getDetails(){
     std::cout << "Book ID: " << book_id << std::endl;
     std::cout << "Title: " << title << std::endl;

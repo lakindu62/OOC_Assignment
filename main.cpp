@@ -32,6 +32,9 @@ int main() {
     Review *r1;
 
     r1 = new Review(5 , "This is a good book" , &b1);
+    b1.addReview(r1);
+
+
 
 
     a2.addBook(b1);

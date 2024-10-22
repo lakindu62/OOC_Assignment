@@ -18,10 +18,11 @@ Review::Review(int rating, std::string comment, Book *book) {
 }
 
 
-void Review::updateReview(int Brating , std::string Bcomment , Book *b){
+void Review::updateReview(int Brating, std::string Bcomment, Book *b){
      rating = Brating;
     comment = Bcomment;
     book = b;
 
     cout << "Review updated" << endl;
 }
+
