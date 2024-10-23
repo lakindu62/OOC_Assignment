@@ -8,14 +8,25 @@
 using namespace std;
 #include "Review.h"
 #include <string>
+#include <utility>
 
-Review::Review(int rating, std::string comment, Book *book) {
+Review::Review(int rating, std::string comment, Book *book , Customer *customer) {
     this->rating = rating;
-    this->comment = comment;
+    this->comment = std::move(comment);
     this->book = book;
+    this->customer = customer;
 
     cout << "Review created" << endl;
 }
+
+void Review::displayReview() {
+    cout << "Rating: " << rating << endl;
+    cout << "Comment: " << comment << endl;
+    cout << "Book: " << book->getName() << endl;
+    cout << "Customer: " << customer->getName() << endl;
+}
+
+
 
 
 void Review::updateReview(int Brating, std::string Bcomment, Book *b){

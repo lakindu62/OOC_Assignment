@@ -59,9 +59,7 @@ int main() {
 
 
     //------  Adding Reviews to books------//
-    Review *r1;
-    r1 = new Review(5, "This is a good book", &b1);
-    b1.addReview(r1);
+
 
 
 
@@ -76,6 +74,12 @@ int main() {
     //login
     customer01->login("mark@gmail.com", "12345"); //login is customer as it inherits of User class
 
+
+    //------  Adding Reviews to books------//
+    Review *r1;
+    r1 = new Review(5, "This is a good book", &b1 ,customer01 );
+    b1.addReview(r1);
+    r1->displayReview();
 
 
 

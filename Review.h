@@ -9,6 +9,7 @@
 #include <iostream>
 #include "Book.h"
 #include <string>
+#include "Customer.h"
 
 
 #define SIZE 5;
@@ -19,9 +20,11 @@ class Review {
     int rating;
     std::string comment;
     Book *book;
+    Customer *customer;
 
 public:
-    Review(int rating, std::string comment, Book *book);
+    Review(int rating, std::string comment, Book *book , Customer *customer);
+    void displayReview();
     void updateReview(int Brating, std::string Bcomment, Book *b);
 };
 

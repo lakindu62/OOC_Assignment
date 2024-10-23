@@ -39,6 +39,7 @@ double Order::calculateTotal() {
     return totalAmount;
 }
 Order::~Order() {
+    cout << "Order deleted" << endl;
     for (int i = 0; i < 2; i++) {
         delete item[i];
     }

@@ -10,11 +10,13 @@
 #include "Book.h"
 #include "Cart.h"
 
+
 class Customer:public User {
 protected:
     std::string shippingAddress;
     int loyaltyPoints;
     Cart cart;
+
 
 
 
