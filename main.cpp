@@ -7,7 +7,7 @@
 #include "Admin.h"
 #include "Contract.h"
 #include "Review.h"
-
+#include "iostream"
 
 int main() {
 
@@ -23,9 +23,13 @@ int main() {
     c1 = new Contract(&a2, &p1, "10/10/2024", "10/10/2025", "contract Terms");
     c1->displayContract();
 
-
     //publisher Login
     p1.login("lakindu62@gmail.com", "12345"); //login is available for both author and publisher as it inherits of User class
+
+
+
+
+std::cout << "-------------------------------------------------------------------------------------------------------------------------------------------------------------------" << std::endl;
 
     //------  Book Creation  ------//
     Book b1 = Book("1", "BookTitle", 200, "Romance", 60, &a2, &p1);
@@ -44,18 +48,17 @@ int main() {
 
 
     //displaying all books published by the publisher
-//    p1.displayBooks();
 
-    //displaying all books published by the Author
-//    a2.displayBooks();
-    //above is possible due to association between author and book as well as publisher and book
+    p1.displayBooks();
+    //above is possible due to association between author and book as well
 
 
+    std::cout << "-------------------------------------------------------------------------------------------------------------------------------------------------------------------" << std::endl;
 
     //------  Admin Creation------//
     Admin admin1 = Admin(1, "LakinduAdmin", "lakinduAdmin62@gmail.com", "12345");
     //admin can add books. which will prompt the author in the terminal to add the book
-//    admin1.addBook();
+    admin1.addBook();
 
 
     //------  Adding Reviews to books------//
@@ -65,6 +68,7 @@ int main() {
 
 
 
+    std::cout << "-------------------------------------------------------------------------------------------------------------------------------------------------------------------" << std::endl;
 
     //------ Customer creation and login ------//
 
