@@ -16,7 +16,7 @@ Book::Book(std::string bID, std::string t, double p, std::string g, int sL , Aut
     author = a;
     publisher = pub;
 
-
+    std::cout << "Book Created" << std::endl;
 }
 
 Book::Book(std::string bID, std::string t, double p, std::string g, int sL, std::string authorN, std::string publisherN) {
@@ -29,6 +29,13 @@ Book::Book(std::string bID, std::string t, double p, std::string g, int sL, std:
     publisherName = std::move(publisherN);
 }
 
+std::string Book::getName() {
+    return title;
+}
+
+double Book::getPrice() {
+    return price;
+}
 
 void Book::addReview(Review *r) {
     for (int i = 0; i < 20; i++) {
@@ -37,11 +44,9 @@ void Book::addReview(Review *r) {
             std::cout << "Review Added to Book" << std::endl;
             return;
         }
-
     }
-
-
 }
+
 
 
 void Book::getDetails(){

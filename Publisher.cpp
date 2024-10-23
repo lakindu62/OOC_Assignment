@@ -15,7 +15,7 @@ void Publisher::addBook(Book &book) {
     for (int i = 0; i < MAX_BOOKS; i++) {
         if (books[i] == nullptr) {
             books[i] = &book;
-            std::cout << "Book Added Successfully!" << std::endl;
+            std::cout << "Book Added to publisher's books " << std::endl;
             return;
         }
     }

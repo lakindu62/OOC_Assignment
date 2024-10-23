@@ -24,6 +24,14 @@ add_executable(Assignment main.cpp
         Cart.h
         Review.cpp
         Review.h
+        Order.cpp
+        Order.h
+        OrderItem.cpp
+        OrderItem.h
+        Payment.cpp
+        Payment.h
+        CartItem.cpp
+        CartItem.h
 
 
 )
