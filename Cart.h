@@ -13,13 +13,13 @@ private:
     static int nextId;
     int cartId;
     double totalAmount;
-    CartItem* cartItems[10];
+    CartItem* cartItems[10]; // Composition due to cartItems being deleted when cart is deleted.
 
 public:
     Cart();
     Cart(int cId);
-    void addItem(Book item , int quantity);
 
+    void addItem(Book item , int quantity);
     void removeItem(int itemId);
     void displayCart();
 

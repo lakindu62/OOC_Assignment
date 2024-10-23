@@ -20,7 +20,7 @@ Cart& Customer::getCart() {
 
 //dependency relationship between Customer and Book
 void Customer::addToCart(Book bookI , int quantity = 1) {
-    cart.addItem(bookI , quantity);
+    cart.addItem(std::move(bookI) , quantity);
 }
 
 bool Customer::placeOrder() {
@@ -41,4 +41,9 @@ bool Customer::placeOrder() {
 
 void Customer::writeReview() {
     cout << "Review written" << endl;
+}
+
+Customer::~Customer() {
+
+    cout << "Customer object destroyed" << endl;
 }

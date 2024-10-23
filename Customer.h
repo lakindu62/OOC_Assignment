@@ -26,6 +26,8 @@ public:
     void addToCart(Book book , int quantity);
     bool placeOrder();
     void writeReview();
+
+    ~Customer();
 };
 
 

@@ -25,7 +25,7 @@ int main() {
 
 
     //publisher Login
-    p1.login("lakindu62@gmail.com", "12345");
+    p1.login("lakindu62@gmail.com", "12345"); //login is available for both author and publisher as it inherits of User class
 
     //------  Book Creation  ------//
     Book b1 = Book("1", "BookTitle", 200, "Romance", 60, &a2, &p1);
@@ -42,18 +42,20 @@ int main() {
     p1.addBook(b2);
 
 
+
     //displaying all books published by the publisher
-    p1.displayBooks();
+//    p1.displayBooks();
 
     //displaying all books published by the Author
-    a2.displayBooks();
+//    a2.displayBooks();
+    //above is possible due to association between author and book as well as publisher and book
 
 
 
     //------  Admin Creation------//
     Admin admin1 = Admin(1, "LakinduAdmin", "lakinduAdmin62@gmail.com", "12345");
     //admin can add books. which will prompt the author in the terminal to add the book
-    admin1.addBook();
+//    admin1.addBook();
 
 
     //------  Adding Reviews to books------//
@@ -72,14 +74,14 @@ int main() {
     //creation
     customer01 = new Customer(1, "mark", "mark@gmail.com", "12345", "123, Galle Road, Colombo 03", 0);
     //login
-    customer01->login("mark@gmail.com", "12345");
+    customer01->login("mark@gmail.com", "12345"); //login is customer as it inherits of User class
 
 
 
 
     //------ process ------ purchase a book
 
-    //add to cart
+    //add to cart -- dependency relationship between Customer and Book as addToCart users bookObject
     customer01->addToCart(b1, 1);
     customer01->addToCart(b2, 2);
 
@@ -87,6 +89,9 @@ int main() {
 
     //place order
     customer01->placeOrder();
+
+    delete customer01; // free memory // this will delete the customer object and the cart object as well
+    // --> deleting the cart object will delete the cartItems array of CartItem objects due to composition relationship
 
 
     return 0;

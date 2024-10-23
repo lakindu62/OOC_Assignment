@@ -24,7 +24,7 @@ Cart::Cart(int cId) {
 
 void Cart::displayCart(){
     for (int i = 0; i < MAX_ORDERS; i++) {
-        if (cartItems[i] -> getPrice() != 0 || cartItems[i]->getQuantity() != 0) {
+        if (cartItems[i] != nullptr) {
             std::cout << "Item ID: " << cartItems[i]->getItemId() << " Name: " << cartItems[i]->getName() << " Price: " << cartItems[i]->getPrice() << " Quantity: " << cartItems[i]->getQuantity() << std::endl;
         }
     }
@@ -33,7 +33,9 @@ void Cart::displayCart(){
 void Cart::addItem(Book item, int quantity) {
 
     for (int i = 0; i < MAX_ORDERS; i++) {
-        if (cartItems[i]->getPrice() == 0 && cartItems[i]->getQuantity() == 0) {
+
+        if (cartItems[i] == nullptr) {
+
             cartItems[i] = new CartItem(1, item.getName(), item.getPrice(), quantity);
 
             // Update the total amount
@@ -45,6 +47,8 @@ void Cart::addItem(Book item, int quantity) {
     }
     std::cout << "Cart is full! Cannot add more items." << std::endl;
 }
+
+
 
 double Cart::getTotalAmount() {
     return totalAmount;
@@ -77,6 +81,12 @@ Cart::~Cart() {
     //deleting cartItems when deleting cart due to composition relationship
     for (int i = 0; i < MAX_ORDERS; i++) {
         delete cartItems[i];
+        std::cout << "CartItem " << i  <<" destroyed " << " || ";
+        if(i == 5) {
+            std::cout << std::endl;
+        }
     }
+
+    std::cout << "\nCart object destroyed" << std::endl;
 
 }
